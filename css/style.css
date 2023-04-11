@@ -233,5 +233,130 @@ body {
   font-weight: 700;
   color: #2fab73;
 }
+.content .location {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+.content .location__title {
+  font-size: 4rem;
+}
+.content .location__info {
+  width: 500px;
+  font-size: 1.6rem;
+  color: #626874;
+  line-height: 2.8rem;
+}
+.content .location__map .map {
+  width: 100%;
+  filter: blur(1px);
+}
+.content .factories {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.content .comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  padding-top: 5rem;
+}
+.content .comment__title {
+  font-size: 4rem;
+}
+.content .comment__info {
+  color: #626874;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.content .comment .swiper {
+  width: 90%;
+  background-color: #2fab73;
+  position: relative;
+  margin-bottom: 50px;
+}
+.content .comment .card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px 40px;
+  border: 2px solid #c4c8d2;
+  cursor: pointer;
+  min-width: 350px;
+}
+.content .comment .card:hover {
+  border: 2px solid #f43754;
+}
+.content .comment .card .card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+.content .comment .card .card-content .info__profile {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .comment .card .card-content .info__profile .profile__name .name {
+  font-size: 1.8rem;
+  color: rgb(11, 19, 42);
+}
+.content .comment .card .card-content .info__profile .profile__name .location {
+  font-size: 1.4rem;
+  color: rgb(79, 86, 101);
+  margin: 0;
+}
+.content .comment .card .card-content .info__profile .profile__score {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.content .comment .card .card-content .info__profile .profile__score .score {
+  color: rgb(79, 86, 101);
+  font-size: 1.4rem;
+}
+.content .comment .card .card-content .info__comment .comment__user {
+  margin: 2rem 0 0;
+  color: rgb(79, 86, 101);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: left;
+}
+.content .comment .swiper-pagination {
+  position: relative;
+}
+.content .comment .swiper-pagination-bullet {
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #FF676D;
+}
+.content .comment .swiper-button-next, .content .comment .swiper-button-prev {
+  position: relative;
+  opacity: 0.7;
+  color: #FF676D;
+  transition: all 0.3s ease;
+  border: 1px solid #f43754;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.content .comment .swiper-button-next:hover, .content .comment .swiper-button-prev:hover {
+  opacity: 1;
+  color: #FF676D;
+}
 
 /*# sourceMappingURL=style.css.map */
