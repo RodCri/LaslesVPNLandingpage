@@ -281,7 +281,6 @@ body {
 }
 .content .comment .swiper {
   width: 90%;
-  background-color: #2fab73;
   position: relative;
   margin-bottom: 50px;
 }
@@ -335,28 +334,68 @@ body {
   line-height: 2.4rem;
   text-align: left;
 }
-.content .comment .swiper-pagination {
+.content .button__slider {
+  width: 80%;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .button__slider .slider__button {
+  height: 100%;
   position: relative;
 }
-.content .comment .swiper-pagination-bullet {
-  height: 7px;
-  width: 26px;
+.content .button__slider .swiper-pagination {
+  position: relative;
+  left: 0;
+}
+.content .button__slider .swiper-button-prev:after, .content .button__slider .swiper-rtl .swiper-button-next:after,
+.content .button__slider .swiper-button-next::after, .content .button__slider .swiper-rtl .swiper-button-prev::after {
+  content: "";
+}
+.content .button__slider .swiper-button-next {
+  background-image: url("../assets/arrow.svg");
+}
+.content .button__slider .swiper-button-prev {
+  background-image: url("../assets/arrowright.svg");
+  background-size: contain;
+}
+.content .button__slider .swiper-horizontal > .swiper-pagination-bullets, .content .button__slider .swiper-pagination-bullets.swiper-pagination-horizontal, .content .button__slider .swiper-pagination-custom, .content .button__slider .swiper-pagination-fraction {
+  bottom: 0;
+  width: 200px;
+  display: flex;
+}
+.content .button__slider .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
   border-radius: 25px;
-  background: #FF676D;
+  background-color: #ddd;
+  opacity: 1;
 }
-.content .comment .swiper-button-next, .content .comment .swiper-button-prev {
-  position: relative;
+.content .button__slider .swiper-pagination-bullet-active {
+  background: #f43754;
+  width: 48px;
+  height: 16px;
+  border-radius: 25px;
+}
+.content .button__slider .swiper-button-next, .content .button__slider .swiper-button-prev {
   opacity: 0.7;
   color: #FF676D;
   transition: all 0.3s ease;
-  border: 1px solid #f43754;
+  border: 2px solid #f43754;
   width: 60px;
   height: 60px;
   border-radius: 30px;
+  top: var(--swiper-navigation-top-offset, 38%);
 }
-.content .comment .swiper-button-next:hover, .content .comment .swiper-button-prev:hover {
+.content .button__slider .swiper-button-next:hover, .content .button__slider .swiper-button-prev:hover {
   opacity: 1;
-  color: #FF676D;
+  color: #f43754;
+  background-color: #fff;
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
