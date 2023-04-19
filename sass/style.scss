@@ -24,10 +24,13 @@ body{
       display: flex;
       list-style: none;
       text-decoration: none;
+      position: relative;
       @media(max-width:920px){
         display: none;
       }
       .nav__link{
+        position: relative;
+        text-align: center;
         a{
           text-decoration: none;
           color: #0b132a;
@@ -38,12 +41,28 @@ body{
         }
         .active{
           color: #f43754;
-          border-bottom: 2px solid #f43754;
+          border-bottom: 3px solid #f43754;
+        }
+        .line{
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -12px;
+          width: 90%;
+          height: 3px;
+          background-color: #f43754;
+          transform: translateY(1%) scaleX(0);
+          transform-origin: center;
+          transition: transform .6s;
+        }
+        a:hover ~ .line{
+          color: #f43754;
+          transform: translateY(1%) scaleX(1);
+          transform-origin: center;
+          transition: transform .6s;
         }
         a:hover{
           color: #f43754;
-          border-bottom: 2px solid #f43754;
-          transition: all .2s;
         }
       }
       

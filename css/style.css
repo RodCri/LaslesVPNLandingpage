@@ -29,11 +29,16 @@ body {
   display: flex;
   list-style: none;
   text-decoration: none;
+  position: relative;
 }
 @media (max-width: 920px) {
   .header .nav__options {
     display: none;
   }
+}
+.header .nav__options .nav__link {
+  position: relative;
+  text-align: center;
 }
 .header .nav__options .nav__link a {
   text-decoration: none;
@@ -45,12 +50,28 @@ body {
 }
 .header .nav__options .nav__link .active {
   color: #f43754;
-  border-bottom: 2px solid #f43754;
+  border-bottom: 3px solid #f43754;
+}
+.header .nav__options .nav__link .line {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 90%;
+  height: 3px;
+  background-color: #f43754;
+  transform: translateY(1%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s;
+}
+.header .nav__options .nav__link a:hover ~ .line {
+  color: #f43754;
+  transform: translateY(1%) scaleX(1);
+  transform-origin: center;
+  transition: transform 0.6s;
 }
 .header .nav__options .nav__link a:hover {
   color: #f43754;
-  border-bottom: 2px solid #f43754;
-  transition: all 0.2s;
 }
 .header .nav__session {
   display: flex;
